@@ -10,7 +10,7 @@ const Header = () => (
   <nav>
     {/* <img src={logo} width={40} /> */}
     <Link to={'/'}>
-      <span className="title">Toni Petrina blog</span>
+      <span className="title">Toni Petrina | Blog</span>
     </Link>
   </nav>
 );

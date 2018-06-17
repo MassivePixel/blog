@@ -91,3 +91,10 @@ a {
     text-decoration: none;
   }
 }
+
+.tags {
+  & .tag {
+    font-size: 0.7em;
+    color: #555;
+  }
+}

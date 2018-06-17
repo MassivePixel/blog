@@ -1,6 +1,7 @@
 ---
 title: import 'api' not import '../../../../../../api' with create-react-app and TypeScript
 date: "2018-02-08"
+tags: ["typescript"]
 ---
 
 Absolute imports are better than relative ones, just ask your mailman. Aptly named article [Say Goodbye to ‘../../../..’ in your TypeScript Imports](https://decembersoft.com/posts/say-goodbye-to-relative-paths-in-typescript-imports/) explains how to enable absolute imports in your regular TypeScript based projects, but for `create-react-app` using `create-react-app-typescript` (check it out at [GitHub repo](https://github.com/wmonk/create-react-app-typescript/)) it cannot work since we cannot edit `webpack.config.js`.
