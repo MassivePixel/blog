@@ -1,33 +1,30 @@
-import React from 'react'
-import Link from 'gatsby-link'
+import React from 'react';
+import Link from 'gatsby-link';
+
+// import logo from './logo-blog.svg';
+
+require('prismjs/themes/prism-tomorrow.css');
+require('./layout.css');
+
+const Header = () => (
+  <nav>
+    {/* <img src={logo} width={40} /> */}
+    <Link to={'/'}>
+      <span className="title">Toni Petrina blog</span>
+    </Link>
+  </nav>
+);
 
 class Template extends React.Component {
   render() {
-    const { location, children } = this.props
-    let header
-    if (location.pathname === '/') {
-      header = (
-        <h1>
-          <Link to={'/'} >
-            Gatsby Starter Blog
-          </Link>
-        </h1>
-      )
-    } else {
-      header = (
-        <h3>
-          <Link to={'/'}>
-            Gatsby Starter Blog
-          </Link>
-        </h3>
-      )
-    }
+    const { location, children } = this.props;
+
     return (
       <div>
-        {header}
+        <Header />
         {children()}
       </div>
-    )
+    );
   }
 }
 
@@ -35,6 +32,6 @@ Template.propTypes = {
   children: React.PropTypes.func,
   location: React.PropTypes.object,
   route: React.PropTypes.object,
-}
+};
 
-export default Template
+export default Template;
