@@ -98,3 +98,7 @@ a {
     color: #555;
   }
 }
+
+.tag + .tag {
+  margin-left: 0.5em;
+}
