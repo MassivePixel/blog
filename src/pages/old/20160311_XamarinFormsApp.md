@@ -1,7 +1,7 @@
 ---
 title: Xamarin.Forms App.xaml and default PCL template
 date: "2016-03-11"
-tags: "xamarin.forms"
+tags: ["xamarin.forms"]
 ---
 
 When creating a new Xamarin.Forms blank app. the default template creates a code based `Application` class in the PCL project. Since this is just a C# class, to add global styles and resources you must add those in code. Creating styles in XAML is preferable to writing them in code. Adding global objects for binding like `ViewModelLocator` for MVVMLight and common converters is also nicer to do in XAML. Luckily, we can add the missing XAML part of this class quickly.
