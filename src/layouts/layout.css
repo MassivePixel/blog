@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=OpenSans|Ubuntu');
 
+/* --blue: #0299ff; */
+
 html {
   height: 100%;
 }
@@ -8,6 +10,7 @@ body {
   height: 100%;
   padding-top: 60px;
   font-family: 'Open Sans', sans-serif;
+  background-color: #333;
 }
 
 nav {
@@ -48,9 +51,10 @@ h6 {
 }
 
 .page {
-  padding-top: 20px;
   max-width: 960px;
   margin: 0 auto;
+  background-color: white;
+  padding: 0 12px 0 12px;
 
   & h3 {
     margin-bottom: 0.5em;
@@ -64,9 +68,10 @@ h6 {
 }
 
 .blog-post {
-  padding-top: 20px;
   max-width: 960px;
   margin: 0 auto;
+  background-color: white;
+  padding: 0 12px 20px 12px;
 }
 
 :not(pre) > code[class*='language-text'] {
@@ -96,9 +101,9 @@ a {
   & .tag {
     font-size: 0.7em;
     color: #555;
+    display: inline-block;
+    padding: 5px;
+    background-color: #dadada;
+    margin-left: 0.5em;
   }
-}
-
-.tag + .tag {
-  margin-left: 0.5em;
 }

@@ -18,8 +18,13 @@ class BlogPostTemplate extends React.Component {
         <h1>{post.frontmatter.title}</h1>
         <p>{post.frontmatter.date}</p>
 
+        <div dangerouslySetInnerHTML={{ __html: post.html }} />
+
+        <hr />
+
         {tags.length > 0 ? (
           <div className="tags">
+            Tags:
             {tags.map((tag, index) => (
               <span key={index} className="tag">
                 {tag}
@@ -28,7 +33,6 @@ class BlogPostTemplate extends React.Component {
           </div>
         ) : null}
 
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
         <hr />
 
         <ul>

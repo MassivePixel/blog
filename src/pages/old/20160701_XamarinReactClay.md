@@ -85,11 +85,3 @@ Much cleaner, but there are some problems with this approach:
 5.  Custom renderers are also
 
 We'll explore these details in upcoming posts.
-\
-\
-\
-\
-\
-\
-\
-\
