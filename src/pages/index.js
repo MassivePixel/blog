@@ -11,12 +11,13 @@ class BlogIndex extends React.Component {
     const posts = get(this, 'props.data.allMarkdownRemark.edges');
 
     return (
-      <div className="page">
+      <div className="page mid-column">
         <Helmet title={siteTitle} />
         {posts.map(({ node }) => {
           const title = get(node, 'frontmatter.title') || node.fields.slug;
+          const tags = node.frontmatter.tags || [];
           return (
-            <div key={node.fields.slug}>
+            <div key={node.fields.slug} className="page__post">
               <h3>
                 <Link style={{ boxShadow: 'none' }} to={node.fields.slug}>
                   {title}
@@ -24,6 +25,16 @@ class BlogIndex extends React.Component {
               </h3>
               <small className="timestamp">{node.frontmatter.date}</small>
               <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
+
+              {tags.length > 0 && (
+                <div className="tags">
+                  {tags.map(tag => (
+                    <Link to={`/tags/${tag}`} className="tag">
+                      #{tag}
+                    </Link>
+                  ))}
+                </div>
+              )}
             </div>
           );
         })}
@@ -51,6 +62,7 @@ export const pageQuery = graphql`
           frontmatter {
             date(formatString: "DD MMMM, YYYY")
             title
+            tags
           }
         }
       }

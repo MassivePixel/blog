@@ -12,7 +12,7 @@ const Tags = ({ pathContext, data }) => {
   } tagged with "${tag}"`;
 
   return (
-    <div>
+    <div className="mid-column">
       <h1>{tagHeader}</h1>
       <ul>
         {edges.map(({ node }) => {

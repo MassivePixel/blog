@@ -13,7 +13,7 @@ class BlogPostTemplate extends React.Component {
     const tags = post.frontmatter.tags || [];
 
     return (
-      <div className="blog-post">
+      <div className="blog-post mid-column">
         <Helmet title={`${post.frontmatter.title} | ${siteTitle}`} />
         <h1>{post.frontmatter.title}</h1>
         <p>{post.frontmatter.date}</p>
@@ -26,9 +26,9 @@ class BlogPostTemplate extends React.Component {
           <div className="tags">
             Tags:
             {tags.map((tag, index) => (
-              <span key={index} className="tag">
+              <Link to={`/tags/${tag}`} key={index} className="tag">
                 {tag}
-              </span>
+              </Link>
             ))}
           </div>
         ) : null}
