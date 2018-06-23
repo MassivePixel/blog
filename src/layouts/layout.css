@@ -84,6 +84,7 @@ h6 {
   & pre {
     margin-left: -12px;
     margin-right: -12px;
+    font-size: 0.9em;
   }
 }
 

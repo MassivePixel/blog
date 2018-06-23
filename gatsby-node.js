@@ -8,6 +8,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
 
   return new Promise((resolve, reject) => {
     const blogPost = path.resolve('./src/templates/blog-post.js');
+    const blogPostAst = path.resolve('./src/templates/blog-post-ast.js');
     const tagTemplate = path.resolve('src/templates/tags.js');
 
     resolve(
@@ -26,6 +27,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
                   frontmatter {
                     title
                     tags
+                    ast
                   }
                 }
               }
@@ -48,7 +50,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
 
           createPage({
             path: post.node.fields.slug,
-            component: blogPost,
+            component: post.node.frontmatter.ast ? blogPostAst : blogPost,
             context: {
               slug: post.node.fields.slug,
               previous,

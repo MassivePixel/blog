@@ -25,7 +25,8 @@
     "gatsby-transformer-remark": "^1.7.1",
     "gatsby-transformer-sharp": "^1.6.1",
     "lodash": "^4.15.0",
-    "prismjs": "^1.14.0"
+    "prismjs": "^1.14.0",
+    "rehype-react": "^3.0.2"
   },
   "devDependencies": {
     "gh-pages": "^0.12.0",
