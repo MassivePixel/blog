@@ -2,6 +2,7 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import Link from 'gatsby-link';
 import get from 'lodash/get';
+import _ from 'lodash';
 
 import Bio from '../components/Bio';
 
@@ -26,7 +27,7 @@ class BlogPostTemplate extends React.Component {
           <div className="tags">
             Tags:
             {tags.map((tag, index) => (
-              <Link to={`/tags/${tag}`} key={index} className="tag">
+              <Link to={`/tags/${_.kebabCase(tag)}`} key={index} className="tag">
                 {tag}
               </Link>
             ))}

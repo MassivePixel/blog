@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'gatsby-link';
 import get from 'lodash/get';
 import Helmet from 'react-helmet';
+import _ from 'lodash';
 
 import Bio from '../components/Bio';
 
@@ -29,7 +30,7 @@ class BlogIndex extends React.Component {
               {tags.length > 0 && (
                 <div className="tags">
                   {tags.map(tag => (
-                    <Link to={`/tags/${tag}`} className="tag">
+                    <Link to={`/tags/${_.kebabCase(tag)}`} className="tag">
                       #{tag}
                     </Link>
                   ))}

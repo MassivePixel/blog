@@ -1,0 +1,14 @@
+.bio {
+  max-width: 600px;
+  margin: 20px auto;
+
+  & img {
+    max-width: 200px;
+    float: left;
+    margin-right: 12px;
+  }
+
+  & .social-icon + .social-icon {
+    margin-left: 12px;
+  }
+}

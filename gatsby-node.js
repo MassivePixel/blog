@@ -88,6 +88,11 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
       component: path.resolve(`./src/experiments/counter.js`),
       context: {},
     });
+    createPage({
+      path: `/bio/`,
+      component: path.resolve(`./src/components/Bio.js`),
+      context: {},
+    });
   });
 };
 
