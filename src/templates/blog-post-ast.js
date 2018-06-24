@@ -3,9 +3,7 @@ import Helmet from 'react-helmet';
 import Link from 'gatsby-link';
 import get from 'lodash/get';
 import rehypeReact from 'rehype-react';
-import Demos from '../pages/2018-forms-in-react/demos';
-
-import './demos.css';
+import DemoResolver from './demos';
 
 class BlogPostTemplatePart1 extends React.Component {
   render() {
@@ -17,7 +15,7 @@ class BlogPostTemplatePart1 extends React.Component {
     const renderAst = new rehypeReact({
       createElement: React.createElement,
       components: {
-        demo: Demos,
+        demo: DemoResolver,
       },
     }).Compiler;
 
