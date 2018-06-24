@@ -82,6 +82,12 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
         });
       })
     );
+
+    createPage({
+      path: `/experiments/counter/`,
+      component: path.resolve(`./src/experiments/counter.js`),
+      context: {},
+    });
   });
 };
 
