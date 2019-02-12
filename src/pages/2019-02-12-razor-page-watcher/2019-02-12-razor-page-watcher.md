@@ -1,7 +1,7 @@
 ---
-title: "Building simple Razor Page reload functionality"
+title: "Building simple Razor Page hot reload functionality"
 date: 2019-02-12
-tags: ["ASP.NET Core", "Razor Pages"]
+tags: ["ASP.NET Core", "Razor Pages", "SignalR"]
 ast: true
 ---
 
