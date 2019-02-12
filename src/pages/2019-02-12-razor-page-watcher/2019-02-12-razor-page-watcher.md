@@ -5,11 +5,13 @@ tags: ["ASP.NET Core", "Razor Pages"]
 ast: true
 ---
 
-Writing Razor Pages in ASP.NET Core is easy and fun. However, after using SPA frameworks for a long time, one of biggest productivity gains is hot reload i.e. refresh the page if the file is changed on the disk. Let's see it in action.
+Writing Razor Pages in ASP.NET Core is easy, fast and fun. To really add to the productivity we want to have hot reload - a staple of Single Page Application frameworks like React or Vue. Let's see it in action.
 
 <img src="screen.gif" style="width: 100%; box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.7)" />
 
-OK, can we build this ourselves? The answer is resounding - yes! So let's do it in a couple of small steps.
+If the source file is changed, reload the page opened in the browser. If using split screens or multi-monitor setup, being able to see changes without switching from the editor to the browser and manually editing the file is a huge time saver.
+
+This doesn't come out of the box with ASP.NET Core, so can we build this ourselves? The answer is a resounding - yes! So let's do it in a couple of small steps.
 
 ## The goal
 
