@@ -1,10 +1,10 @@
 {
-  "name": "gatsby-starter-blog-no-styles",
-  "description": "Starter Gatsby Blog No Styles",
+  "name": "massivepixel-blog",
+  "description": "Massive Pixel | Blog",
   "version": "1.0.0",
-  "author": "Noah Glusenkamp <noah.glusenkamp@gmail.com>",
+  "author": "Toni Petrina",
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby-starter-blog/issues"
+    "url": "https://github.com/MassivePixel/blog/issues"
   },
   "dependencies": {
     "gatsby": "^1.9.273",
@@ -37,7 +37,7 @@
     "gh-pages": "^0.12.0",
     "prettier": "^1.6.1"
   },
-  "homepage": "https://github.com/noahg/gatsby-starter-blog-no-styles#readme",
+  "homepage": "https://github.com/massivepixel/blog#readme",
   "keywords": [
     "gatsby"
   ],
@@ -45,7 +45,7 @@
   "main": "n/a",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/noahg/gatsby-starter-blog-no-styles.git"
+    "url": "git+https://github.com/MassivePixel/blog.git"
   },
   "scripts": {
     "dev": "gatsby develop",
