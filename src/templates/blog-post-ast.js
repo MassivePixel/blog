@@ -25,12 +25,10 @@ class BlogPostTemplatePart1 extends React.Component {
       <div className="blog-post mid-column">
         <Helmet title={`${post.frontmatter.title} | ${siteTitle}`} />
         <h1>{post.frontmatter.title}</h1>
-        <p>{post.frontmatter.date}</p>
+        <small className="timestamp">{post.frontmatter.date}</small>
 
         {renderAst(post.htmlAst)}
         {/* <div dangerouslySetInnerHTML={{ __html: post.html }} /> */}
-
-        <hr />
 
         {tags.length > 0 ? (
           <div className="tags">
@@ -46,9 +44,7 @@ class BlogPostTemplatePart1 extends React.Component {
           </div>
         ) : null}
 
-        <hr />
-
-        <ul>
+        <ul className="links">
           {previous && (
             <li>
               <Link to={previous.fields.slug} rel="prev">
