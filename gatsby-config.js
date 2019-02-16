@@ -2,6 +2,8 @@ module.exports = {
   siteMetadata: {
     title: 'Toni Petrina | Blog',
     author: 'Toni Petrina',
+    description: `Something, something, code`,
+    siteUrl: `https://massivepixel.co`,
   },
   plugins: [
     `gatsby-plugin-postcss`,
