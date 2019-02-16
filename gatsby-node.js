@@ -73,7 +73,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
         // Make tag pages
         tags.forEach(tag => {
           createPage({
-            path: `/tags/${_.kebabCase(tag)}/`,
+            path: `/tags/${_.kebabCase(tag)}`,
             component: tagTemplate,
             context: {
               tag,
@@ -84,12 +84,12 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
     );
 
     createPage({
-      path: `/experiments/counter/`,
+      path: `/experiments/counter`,
       component: path.resolve(`./src/experiments/counter.js`),
       context: {},
     });
     createPage({
-      path: `/bio/`,
+      path: `/bio`,
       component: path.resolve(`./src/components/Bio.js`),
       context: {},
     });

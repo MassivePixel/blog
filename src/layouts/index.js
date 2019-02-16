@@ -6,18 +6,6 @@ import Link from 'gatsby-link';
 require('prismjs/themes/prism-tomorrow.css');
 require('./layout.css');
 
-const Header = () => (
-  <nav>
-    {/* <img src={logo} width={40} /> */}
-    <Link exact to={'/'} activeClassName="active">
-      <span className="title">Blog</span>
-    </Link>
-    <Link to={'/bio'} activeClassName="active">
-      <span className="title">About</span>
-    </Link>
-  </nav>
-);
-
 class Template extends React.Component {
   render() {
     const { location, children } = this.props;
@@ -25,16 +13,10 @@ class Template extends React.Component {
     return (
       <div>
         <Header />
-        {children()}
+        {children}
       </div>
     );
   }
 }
-
-Template.propTypes = {
-  children: React.PropTypes.func,
-  location: React.PropTypes.object,
-  route: React.PropTypes.object,
-};
 
 export default Template;

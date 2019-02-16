@@ -3,8 +3,7 @@ import Link from 'gatsby-link';
 import get from 'lodash/get';
 import Helmet from 'react-helmet';
 import _ from 'lodash';
-
-import Bio from '../components/Bio';
+import Layout from '../components/layout';
 
 class BlogIndex extends React.Component {
   render() {
@@ -12,34 +11,36 @@ class BlogIndex extends React.Component {
     const posts = get(this, 'props.data.allMarkdownRemark.edges');
 
     return (
-      <div className="page mid-column">
-        <Helmet title={siteTitle} />
-        {posts.map(({ node }) => {
-          const title = get(node, 'frontmatter.title') || node.fields.slug;
-          const tags = node.frontmatter.tags || [];
-          return (
-            <div key={node.fields.slug} className="page__post">
-              <h3>
-                <Link style={{ boxShadow: 'none' }} to={node.fields.slug}>
-                  {title}
-                </Link>
-              </h3>
-              <small className="timestamp">{node.frontmatter.date}</small>
-              <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
+      <Layout location={this.props.location} title={siteTitle}>
+        <div className="page mid-column">
+          <Helmet title={siteTitle} />
+          {posts.map(({ node }) => {
+            const title = get(node, 'frontmatter.title') || node.fields.slug;
+            const tags = node.frontmatter.tags || [];
+            return (
+              <div key={node.fields.slug} className="page__post">
+                <h3>
+                  <Link style={{ boxShadow: 'none' }} to={node.fields.slug}>
+                    {title}
+                  </Link>
+                </h3>
+                <small className="timestamp">{node.frontmatter.date}</small>
+                <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
 
-              {tags.length > 0 && (
-                <div className="tags">
-                  {tags.map(tag => (
-                    <Link to={`/tags/${_.kebabCase(tag)}`} className="tag">
-                      #{tag}
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
-          );
-        })}
-      </div>
+                {tags.length > 0 && (
+                  <div className="tags">
+                    {tags.map(tag => (
+                      <Link to={`/tags/${_.kebabCase(tag)}`} className="tag">
+                        #{tag}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+            );
+          })}
+        </div>
+      </Layout>
     );
   }
 }

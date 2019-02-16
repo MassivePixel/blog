@@ -4,7 +4,7 @@ import Link from 'gatsby-link';
 import get from 'lodash/get';
 import _ from 'lodash';
 
-import Bio from '../components/Bio';
+import Layout from '../components/layout';
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -14,46 +14,51 @@ class BlogPostTemplate extends React.Component {
     const tags = post.frontmatter.tags || [];
 
     return (
-      <div className="blog-post mid-column">
-        <Helmet title={`${post.frontmatter.title} | ${siteTitle}`} />
-        <h1>{post.frontmatter.title}</h1>
-        <p>{post.frontmatter.date}</p>
+      <Layout location={this.props.location} title={siteTitle}>
+        <div className="blog-post mid-column">
+          <Helmet title={`${post.frontmatter.title} | ${siteTitle}`} />
+          <h1>{post.frontmatter.title}</h1>
+          <p>{post.frontmatter.date}</p>
 
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
+          <div dangerouslySetInnerHTML={{ __html: post.html }} />
 
-        <hr />
+          <hr />
 
-        {tags.length > 0 ? (
-          <div className="tags">
-            Tags:
-            {tags.map((tag, index) => (
-              <Link to={`/tags/${_.kebabCase(tag)}`} key={index} className="tag">
-                {tag}
-              </Link>
-            ))}
-          </div>
-        ) : null}
+          {tags.length > 0 ? (
+            <div className="tags">
+              Tags:
+              {tags.map((tag, index) => (
+                <Link
+                  to={`/tags/${_.kebabCase(tag)}`}
+                  key={index}
+                  className="tag">
+                  {tag}
+                </Link>
+              ))}
+            </div>
+          ) : null}
 
-        <hr />
+          <hr />
 
-        <ul>
-          {previous && (
-            <li>
-              <Link to={previous.fields.slug} rel="prev">
-                ← {previous.frontmatter.title}
-              </Link>
-            </li>
-          )}
+          <ul>
+            {previous && (
+              <li>
+                <Link to={previous.fields.slug} rel="prev">
+                  ← {previous.frontmatter.title}
+                </Link>
+              </li>
+            )}
 
-          {next && (
-            <li>
-              <Link to={next.fields.slug} rel="next">
-                {next.frontmatter.title} →
-              </Link>
-            </li>
-          )}
-        </ul>
-      </div>
+            {next && (
+              <li>
+                <Link to={next.fields.slug} rel="next">
+                  {next.frontmatter.title} →
+                </Link>
+              </li>
+            )}
+          </ul>
+        </div>
+      </Layout>
     );
   }
 }

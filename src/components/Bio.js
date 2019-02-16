@@ -3,6 +3,7 @@ import { SocialIcon } from 'react-social-icons';
 
 import me from './me.png';
 import './bio.css';
+import Layout from './layout';
 
 class Bio extends React.Component {
   render() {
@@ -72,4 +73,10 @@ class Bio extends React.Component {
   }
 }
 
-export default Bio;
+export default function(props) {
+  return (
+    <Layout>
+      <Bio />
+    </Layout>
+  );
+}

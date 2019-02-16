@@ -4,6 +4,8 @@ import PropTypes from 'prop-types';
 // Components
 import Link from 'gatsby-link';
 
+import Layout from '../components/layout';
+
 const Tags = ({ pathContext, data }) => {
   const { tag } = pathContext;
   const { edges, totalCount } = data.allMarkdownRemark;
@@ -12,27 +14,29 @@ const Tags = ({ pathContext, data }) => {
   } tagged with "${tag}"`;
 
   return (
-    <div className="mid-column">
-      <h1>{tagHeader}</h1>
-      <ul>
-        {edges.map(({ node }) => {
-          const {
-            fields: { slug },
-            frontmatter: { path, title },
-          } = node;
-          return (
-            <li key={slug}>
-              <Link to={slug}>{title}</Link>
-            </li>
-          );
-        })}
-      </ul>
-      {/*
+    <Layout>
+      <div className="mid-column center-content">
+        <h1>{tagHeader}</h1>
+        <ul>
+          {edges.map(({ node }) => {
+            const {
+              fields: { slug },
+              frontmatter: { path, title },
+            } = node;
+            return (
+              <li key={slug}>
+                <Link to={slug}>{title}</Link>
+              </li>
+            );
+          })}
+        </ul>
+        {/*
               This links to a page that does not yet exist.
               We'll come back to it!
             */}
-      <Link to="/tags">All tags</Link>
-    </div>
+        <Link to="/tags">All tags</Link>
+      </div>
+    </Layout>
   );
 };
 

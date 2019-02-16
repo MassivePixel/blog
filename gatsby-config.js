@@ -1,9 +1,10 @@
 module.exports = {
   siteMetadata: {
-    title: "Toni Petrina | Blog",
+    title: 'Toni Petrina | Blog',
     author: 'Toni Petrina',
   },
   plugins: [
+    `gatsby-plugin-postcss`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -27,9 +28,9 @@ module.exports = {
               wrapperStyle: `margin-bottom: 1.0725rem`,
             },
           },
-          'gatsby-remark-prismjs',
-          'gatsby-remark-copy-linked-files',
-          'gatsby-remark-smartypants',
+          `gatsby-remark-prismjs`,
+          `gatsby-remark-copy-linked-files`,
+          `gatsby-remark-smartypants`,
         ],
       },
     },
@@ -41,12 +42,13 @@ module.exports = {
         trackingId: `UA-44411494-11`,
       },
     },
+    `gatsby-plugin-feed`,
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-favicon`,
       options: {
-        logo: "./src/MassivePixelLogo.png",
+        logo: './src/MassivePixelLogo.png',
         injectHTML: true,
         icons: {
           android: true,
@@ -57,9 +59,9 @@ module.exports = {
           firefox: true,
           twitter: false,
           yandex: false,
-          windows: false
-        }
-      }
-    }
+          windows: false,
+        },
+      },
+    },
   ],
 };

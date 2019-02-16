@@ -82,6 +82,10 @@ h6 {
   background-color: white;
 }
 
+.center-content {
+  padding: 1.5em calc(27.5% - 5rem);
+}
+
 .page {
   padding-top: 25px;
 
