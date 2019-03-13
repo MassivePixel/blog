@@ -5,6 +5,9 @@ import Helmet from 'react-helmet';
 import _ from 'lodash';
 import Layout from '../components/layout';
 
+require('prismjs/themes/prism-tomorrow.css');
+require('./pages.css');
+
 class BlogIndex extends React.Component {
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title');
