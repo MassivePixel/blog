@@ -1,6 +1,6 @@
 ---
 title: "Don't use Last or LastOrDefault with EF Core"
-date: 2019-06-16
+date: 2019-06-06
 tags: ["EF Core"]
 ast: false
 ---
