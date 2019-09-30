@@ -1,7 +1,7 @@
 ---
 title: 'VS Code on macOS and .NET Core 3.0 fix'
 date: 2019-09-02
-tags: ['C#', 'functional programming']
+tags: ['VS code']
 ast: false
 ---
 
