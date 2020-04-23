@@ -37,7 +37,7 @@ Finally I can get rid of my half-baked `stack-large` classes. Tailwind is not th
 
 But this is obviously more verbose and requires more keystrokes!
 
-## Use semantic sizing or 6 vs large
+## Use semantic sizing instead of numbers
 
 Using class like `space-y-6` doesn't tell you much. Sure, it might mean `1.5rem`, but it doesn't conwey any semantic meaning. Code generation to the rescue! Tailwind allows creation of utility classes based on a configuration. The default configuration creates all the styles you can find in their documentation, but it can be extended to create additional ones.
 
