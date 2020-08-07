@@ -25,7 +25,6 @@ class Bio extends React.Component {
         </p>
         <h2>Links</h2>
         <SocialIcon url="https://github.com/tpetrina" />
-        <SocialIcon url="https://twitter.com/to_pe" />
         <SocialIcon url="https://www.linkedin.com/in/tonipetrina" />
         <SocialIcon url="https://stackoverflow.com/users/671469/toni-petrina" />
         <h2>Projects</h2>
