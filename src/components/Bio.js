@@ -10,22 +10,19 @@ class Bio extends React.Component {
     return (
       <div className="bio">
         <h1>Toni Petrina</h1>
+
+        <h2>Hi, I am Toni and welcome to my blog/scratchpad.</h2>
         <p>
           <img src={me} alt="" />
-          Speaker, blogger, developer, Microsoft MVP for C# and all-around
-          technology enthusiast. Daily chores involve working on Xamarin apps
-          and full stack apps. He spends most of the time at the keyboard typing
-          yet another demo or application. If you take his keyboard away from
-          him, he will talk endlessly about code...and functional programming.
-          Been coding for over a decade to know if something is a programming
-          fad or not. And no, functional programming is not a fad at all. Strong
-          proponent of Open Source and all things chocolate. Loves mobile and
-          game development, web and cloud services. Too little time for too many
-          things. Especially for funct.....never mind!
+          What do I do? I write code and tech lead @ [Visma
+          e-conomic](https://e-conomic.dk).
         </p>
+
+        <div style={{ clear: 'both' }}></div>
+
         <h2>Links</h2>
         <SocialIcon url="https://github.com/tpetrina" />
-        <SocialIcon url="https://twitter.com/to_pe" />
+        <SocialIcon url="https://twitter.com/tonipetrina1" />
         <SocialIcon url="https://www.linkedin.com/in/tonipetrina" />
         <SocialIcon url="https://stackoverflow.com/users/671469/toni-petrina" />
         <h2>Projects</h2>
