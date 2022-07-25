@@ -4,19 +4,19 @@
   "version": "2.0.0",
   "author": "Toni Petrina",
   "bugs": {
-    "url": "https://github.com/MassivePixel/site/issues"
+    "url": "https://github.com/MassivePixel/blog/issues"
   },
   "dependencies": {},
   "devDependencies": {
     "parcel": "^2.6.2",
     "prettier": "^2.7.1"
   },
-  "homepage": "https://github.com/massivepixel/site#readme",
+  "homepage": "https://github.com/massivepixel/blog#readme",
   "keywords": [],
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MassivePixel/site.git"
+    "url": "git+https://github.com/MassivePixel/blog.git"
   },
   "scripts": {
     "start": "parcel src/index.html",
