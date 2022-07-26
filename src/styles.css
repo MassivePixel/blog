@@ -1,5 +1,5 @@
 :root {
-  --accent: rgb(0, 0, 238);
+  --accent: rgb(72, 155, 220);
 }
 
 * {
@@ -114,7 +114,7 @@ main > h1 > img {
 
 main > h2 {
   font-weight: 300;
-  padding-left: 4rem;;
+  padding-left: 4rem;
 }
 
 main > footer {
