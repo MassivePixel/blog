@@ -2,6 +2,10 @@
   --accent: rgb(0, 0, 238);
 }
 
+* {
+  box-sizing: border-box;
+}
+
 html {
   font-family: 'Inter', sans-serif;
 }
@@ -22,9 +26,11 @@ body {
 }
 
 .fixed-background {
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
+  top: 0;
+  left: 0;
   overflow: hidden;
 }
 
@@ -84,7 +90,7 @@ body {
 
 #container .wrapper:hover svg {
   color: var(--accent);
-  transform: scale(2);
+  transform: scale(4);
 }
 
 main {
@@ -97,10 +103,18 @@ main {
 
 main > h1 {
   margin: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+main > h1 > img {
+  width: 4rem;
 }
 
 main > h2 {
   font-weight: 300;
+  padding-left: 4rem;;
 }
 
 main > footer {
