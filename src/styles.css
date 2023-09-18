@@ -85,18 +85,16 @@ body {
   transform: rotate(45deg);
 }
 
-#container .wrapper:hover {
-  /* background-color: blue; */
-}
-
 #container .wrapper:hover svg {
   color: var(--accent);
   transform: scale(4);
 }
 
 main {
-  z-index: 1;
-  padding: 4rem 2rem;
+  position: fixed;
+  overflow: auto;
+  inset: 0;
+  padding: 1rem 2rem;
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -119,7 +117,51 @@ main > h2 {
 }
 
 main > footer {
-  position: fixed;
-  bottom: 1rem;
+  margin-top: auto;
   font-size: 0.8em;
+}
+
+h2#projects {
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-left: -4rem;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+}
+
+h2#projects::before {
+  content: '';
+  border-left: 0.5rem solid var(--accent);
+  margin-right: 0.5rem;
+}
+
+.projects {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.projects > * {
+  margin-right: 2rem;
+  margin-bottom: 2rem;
+}
+
+.project {
+  padding: 1rem 2rem;
+
+  border: 4px solid var(--accent);
+  box-shadow: 4px 4px 0 black;
+  max-width: 500px;
+}
+
+.project a {
+  text-decoration: none;
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 1.2;
+  font-family: sans-serif;
+}
+
+.project .title {
+  font-weight: bold;
 }
