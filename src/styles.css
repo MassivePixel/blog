@@ -168,3 +168,16 @@ h2#projects::before {
 .project .title {
   font-weight: bold;
 }
+
+.project .learn-more {
+  display: inline-block;
+  margin-top: 1rem;
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.2s ease;
+}
+
+.project .learn-more:hover {
+  transform: translateX(4px);
+}

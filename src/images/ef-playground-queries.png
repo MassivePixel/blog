@@ -1,0 +1,28 @@
+<svg width="600" height="400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="600" height="400" fill="#2d3748"/>
+  <rect x="20" y="20" width="560" height="360" fill="#1a202c" rx="8"/>
+  
+  <!-- LINQ query -->
+  <text x="50" y="60" font-family="sans-serif" font-size="14" fill="#f7fafc" font-weight="bold">LINQ Query:</text>
+  <rect x="40" y="70" width="520" height="80" fill="#4a5568" rx="4" opacity="0.3"/>
+  <text x="50" y="95" font-family="monospace" font-size="11" fill="#48bb78">var</text>
+  <text x="80" y="95" font-family="monospace" font-size="11" fill="#e2e8f0"> users = context.Users</text>
+  <text x="70" y="115" font-family="monospace" font-size="11" fill="#e2e8f0">.Where(u => u.Age > 18)</text>
+  <text x="70" y="135" font-family="monospace" font-size="11" fill="#e2e8f0">.OrderBy(u => u.Name);</text>
+  
+  <!-- Arrow -->
+  <path d="M 300 160 L 300 190" stroke="#489be4" stroke-width="3" fill="none"/>
+  <path d="M 300 190 L 290 180 L 310 180 Z" fill="#489be4"/>
+  
+  <!-- SQL query -->
+  <text x="50" y="220" font-family="sans-serif" font-size="14" fill="#f7fafc" font-weight="bold">Generated SQL:</text>
+  <rect x="40" y="230" width="520" height="120" fill="#4a5568" rx="4" opacity="0.3"/>
+  <text x="50" y="255" font-family="monospace" font-size="11" fill="#fbb6ce">SELECT</text>
+  <text x="105" y="255" font-family="monospace" font-size="11" fill="#e2e8f0"> [u].[Id], [u].[Name], [u].[Age]</text>
+  <text x="50" y="275" font-family="monospace" font-size="11" fill="#fbb6ce">FROM</text>
+  <text x="95" y="275" font-family="monospace" font-size="11" fill="#e2e8f0"> [Users] AS [u]</text>
+  <text x="50" y="295" font-family="monospace" font-size="11" fill="#fbb6ce">WHERE</text>
+  <text x="100" y="295" font-family="monospace" font-size="11" fill="#e2e8f0"> [u].[Age] > 18</text>
+  <text x="50" y="315" font-family="monospace" font-size="11" fill="#fbb6ce">ORDER BY</text>
+  <text x="130" y="315" font-family="monospace" font-size="11" fill="#e2e8f0"> [u].[Name]</text>
+</svg>
